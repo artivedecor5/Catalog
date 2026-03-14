@@ -13,7 +13,13 @@ nav a {
 
 .navbar {
     background-color: #7f5b3b;
-    border-radius: 10px;
+    width: 100%;
+    left: 0;
+    position: fixed;
+    padding: 35px 0px;
+    text-align: center;
+    z-index: 1030;
+    transition: all 0.3s ease;
 }
 
 .navbar-brand img {
@@ -24,39 +30,39 @@ nav a {
 .navbar-nav .nav-item .nav-link {
     font-size: 22px;
     color: rgb(255, 255, 255);
+    font-size: 24px;
+    font-family: "Roboto Slab", serif;
+    padding: 0;
+    font-weight: 600;
 }
-
-.navbar-light .navbar-nav .nav-link:focus,
-.navbar-light .navbar-nav .nav-link:hover,
+.affix{
+    padding:15px 0;
+    transition: all 0.3s ease;
+    background-color: #111;
+}
+.navbar-nav .nav-item .nav-link:focus,
+.navbar-nav .nav-item .nav-link:hover,
 .navbar-nav .nav-item .nav-link.active {
     color: rgb(0, 0, 0);
 }
+.affix .navbar-nav .nav-item .nav-link:focus,
+.affix .navbar-nav .nav-item .nav-link:hover,
+.affix .navbar-nav .nav-item .nav-link.active {
+    color: #7f5b3b !important;
+}
+.affix .navbar-nav .nav-item .nav-link{
+    color: #FFF !important;
+}
 
-/* Product-card-start HERE */
-/* .card-section{
-    background-color: #7f5b3b;
+ @keyframes myAnimation {
+  /* 0%   {background-color:black; left:0px; top:0px;}
+  100%  {background-color:yellow; left:200px; top:0px;} */
 }
-.product-card {
-    border-radius: 10px;
-    padding: 20px 10px;
-    margin: 1rem 0;
-    text-align: center;
-}
-.card-main{
-    max-width: 33%;
-    padding: 0 10px;
-}
-.card-main .card .card-body{
-    font-size: 24px;
-    line-height: 1.5;
-    font-weight: 700;
-}
-.card-main .card .card-body .btn{
-    font-size: 22px;
-} */
-/* Product-card-start HERE */
-
 /* ---------- Desktop default ---------- */
+.product-section{
+    top: 165px;
+    position: relative;
+}
 .product-card {
     display: flex;
     flex-direction: column;
@@ -95,7 +101,8 @@ nav a {
 
 /* ---------- Product Text Styling ---------- */
 .product-name {
-    font-size: clamp(0.85rem, 1.2vw, 1rem);
+    
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
     /* auto responsive */
     font-weight: 600;
     color: #222;
@@ -107,15 +114,16 @@ nav a {
 }
 
 .product-content p {
-    font-size: clamp(0.8rem, 1vw, 0.9rem);
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
     margin-bottom: 0.25rem;
     color: #000000;
 }
 
 .product-item-code {
-    font-size: 0.75rem;
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
     color: #000000;
 }
 .btn{
     background-color: #7f5b3b;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
 }
